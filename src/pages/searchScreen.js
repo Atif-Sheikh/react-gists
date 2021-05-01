@@ -13,6 +13,8 @@ const SearchScreen = () => {
     const handleSearch = async (name) => {
         try {
             setLoading(true);
+            setSearchResult(null);
+            setErr(null);
             let result = await getGists(name);
             let toJSON = await result.json();
 

@@ -10,10 +10,14 @@ const ResultDetails = ({ searchResult, loading, error }) => {
         <div>
             {
                 searchResult ? <div className="searchResultContainer">
-                    <p className="result">{error ? error : `${searchResult.length} ${searchResult.length > 1 ? 'Gists' : 'Gist'} found.`}</p>
+                    <p className="result">{`${searchResult.length} ${searchResult.length > 1 ? 'Gists' : 'Gist'} found.`}</p>
                 </div>
                     :
-                    null
+                    error
+                        ?
+                        <p className="result">{error}</p>
+                        :
+                        null
             }
         </div>
     )
