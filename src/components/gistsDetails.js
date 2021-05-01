@@ -57,7 +57,10 @@ export default function Forks({ showModal, setShowModal, gist }) {
             <Fade in={showModal}>
                 <div className={classes.paper}>
                     {
-                        !forks.length && !loading ?
+                        loading ?
+                        <p className="result">Loading...</p>
+                        :
+                        !forks.length ?
                             <p id="transition-modal-description">No forks Found</p>
                             :
                             <>
