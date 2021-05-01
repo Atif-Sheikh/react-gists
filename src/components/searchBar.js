@@ -1,13 +1,13 @@
 import React, { useRef } from 'react'
 
-const SearchBar = ({handleSearch}) => {
+const SearchBar = ({ handleSearch }) => {
     const inputRef = useRef();
 
     const handleSubmit = (e) => {
         e.preventDefault();
         let name = inputRef.current.value.trim();
 
-        if(!name) return;
+        if (!name) return;
 
         handleSearch(name);
     };

@@ -1,4 +1,4 @@
-const  BASE_URL = 'https://api.github.com';
+const BASE_URL = 'https://api.github.com';
 
 
 export const getGists = (name) => {
